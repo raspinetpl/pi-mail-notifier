@@ -7,7 +7,7 @@ ERROR = 0
 # SETTINGS
 USERNAME = "LOGIN"
 PASSWORD = "PASSWORD"
-SERWER_ADRES = "imap.gmail.com"
+IMAP_ADDRESS = "imap.gmail.com"
 PORT_IMAP = "993"
 
 # OFFSET
@@ -26,7 +26,7 @@ GPIO.setup(RED_LED, GPIO.OUT)
 
 try:
 	
-    obj = imaplib.IMAP4_SSL(SERWER_ADRES, PORT_IMAP)
+    obj = imaplib.IMAP4_SSL(IMAP_ADDRESS, PORT_IMAP)
     obj.login(USERNAME, PASSWORD)
     obj.select('Inbox')
     newmails = len(obj.search(None,'UnSeen')[1][0].split())
