@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+#
+#  GPLv2.0 raspi.net.pl
+#
 import RPi.GPIO as GPIO, imaplib
 
 DEBUG = 1
